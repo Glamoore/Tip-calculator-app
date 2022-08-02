@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles/normalize.css">
-  <link rel="stylesheet" href="/styles/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <title>Tip calculator app</title>
 
-<body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <header>
-    <h1 class="main-header">SPLI<br>TTER</h1>
-  </header>
+    <!-- JS -->
+    <script src="/scripts/main.js"></script>
+  </head>
 
-  <main>
+  <body>
+    <header>
+      <img class="header-logo" src="./images/logo.svg" alt="logo" />
+    </header>
 
-    <section>
-      <h2>Bill</h2>
-      <div class="bill-input"><img src="/images/icon-dollar.svg" alt="dollar"><input type="number" id="bill_amount" name="bill_amount" min="1" max="10"></div>
-    </section>
+    <main>
+      <section class="bill-section">
+        <h2 class="bill-heading">Bill</h2>
+        <div class="bill_amount">
+          <img
+            src="/images/icon-dollar.svg"
+            alt="dollar"
+            class="bill-img"
+          /><input
+            type="number"
+            id="bill_amount"
+            name="bill_amount"
+            class="user-bill-input"
+            placeholder="0"
+          />
+        </div>
+      </section>
 
-    <section>
-      <h2>Select Tip %</h2>
-      <button>5%</button>
-      <button>10%</button>
-      <button>15%</button>
-      <button>25%</button>
-      <button>50%</button>
-      <button>Custom</button>
-    </section>
+      <section class="tip-section">
+        <h2 class="tip-heading">Select Tip %</h2>
+        <div class="tip-selection">
+          <button id="5" onclick="totalPerPerson5()">5%</button>
+          <button id="10" onclick="totalPerPerson10()">10%</button>
+          <button id="15" onclick="totalPerPerson15()">15%</button>
+          <button id="25" onclick="totalPerPerson25()">25%</button>
+          <button id="50" onclick="totalPerPerson50()">50%</button>
+          <div class="custom_input">
+            <input
+              type="number"
+              id="custom_input"
+              name="custom_input"
+              placeholder="Custom"
+              class="user-custom-tip-input"
+              onclick="totalPerPersonCustom()"
+            />
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Number of People</h2>
-      <div><img src="/images/icon-person.svg" alt="dollar"><input type="number" id="numberOfPeople" name="numberOfPeople" min="1" max="6"></div>
-    </section>
+      <section class="numberOfPeople-section">
+        <h2 class="numberOfPeople-header">Number of People</h2>
+        <div class="bill_amount numberOfPeople-amount">
+          <img
+            src="/images/icon-person.svg"
+            alt="dollar"
+            class="numberOfPeople-img"
+          /><input
+            type="number"
+            id="numberOfPeople"
+            name="numberOfPeople"
+            placeholder="0"
+            class="user-bill-input numberOfPeople-input"
+          />
+        </div>
+      </section>
 
-    <section>
-      <h3>Tip Amount</h3>
-      <p>/ person</p>
-    </section>
+      <section class="calc-results">
+        <div class="tipAmount-result">
+          <div class="tipAmount-result-heading">
+            <h3 class="calc-results-heading">Tip Amount</h3>
+            <p class="calc-results-text">/ person</p>
+          </div>
+          <span id="tipPerPerson" class="tipPerPerson">£4.27</span>
+        </div>
 
-    <section>
-      <h3>Total</h3>
-      <p>/ person</p>
-    </section>
+        <div class="totalAmount-result tipAmount-result">
+          <div class="tipAmount-result">
+           <div class="tipAmount-result-heading">
+              <h3 class="calc-results-heading">Total</h3>
+              <p class="calc-results-text">/ person</p>
+           </div>
+          </div>
+          <span id="totalPerPerson" class="tipPerPerson">£32.79</span>
+        </div>
 
-    <section>
-      <button>Reset</button>
-    </section>
+        <button>Reset</button>
+      </section>
+    </main>
 
-  </main>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Reece Moore</a>.
-  </footer>
-
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Reece Moore</a>.
+    </footer>
+  </body>
 </html>

@@ -5,13 +5,6 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-.bill-input {
-  background-color: #f3f9fa;
-  width: 311px;
-  height: 48px;
-  border-radius: 5px;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -19,4 +12,229 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+::placeholder {
+  color: hsla(183, 100%, 15%, 0.5);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* HEADINGS */
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 40.86px;
+}
+
+.header-logo {
+  width: 86.66px;
+  height: 53.14px;
+}
+
+.bill-heading,
+.tip-heading,
+.numberOfPeople-header {
+  font-size: 16px;
+  font-weight: 700px;
+  line-height: 24px;
+  color: hsla(186, 14%, 43%, 1);
+  padding-bottom: 6px;
+  margin: 0px;
+}
+
+/* CALC BODY */
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px 25px 0px 0px;
+  max-width: 375px;
+  height: 789px;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  display: flex;
+  flex-direction: column;
+}
+
+/* BILL SECTION */
+
+.bill-section {
+  max-width: 311px;
+  max-height: 78px;
+  padding: 32px 32px 0 32px;
+  /* border: 1px solid blue; */
+}
+
+.bill_amount {
+  min-width: 311px;
+  min-height: 48px;
+  border-radius: 5px;
+  background-color: hsla(185, 38%, 97%, 1);
+}
+
+.bill-img {
+  display: inline;
+  min-width: 9.84px;
+  height: 15.46px;
+  padding-top: 16.87px;
+  padding-left: 19.26px;
+}
+
+.user-bill-input {
+  background-color: hsla(185, 38%, 97%, 1);
+  width: 106.4px;
+  height: 36px;
+  color: hsla(183, 100%, 15%, 1);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  margin-left: 147px;
+  margin-right: 17.48px;
+  border: 0px solid;
+}
+
+/* TIP SECTION */
+
+.tip-section {
+  width: 311px;
+  height: 216px;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-top: 32px;
+}
+
+.tip-heading {
+  line-height: 23.7px;
+}
+
+.tip-selection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 176px;
+  column-gap: 16.56px;
+  row-gap: 16px;
+}
+
+button {
+  width: 146.63px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: hsla(183, 100%, 15%, 1);
+  color: hsla(0, 0%, 100%, 1);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+button:active {
+  background-color: hsla(172, 67%, 45%, 1);
+  color: hsla(183, 100%, 15%, 1);
+}
+
+.custom_input {
+  width: 146.63px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: hsla(185, 38%, 97%, 1);
+}
+
+.user-custom-tip-input {
+  width: 111.49px;
+  height: 36px;
+  text-align: right;
+  font-weight: 700;
+  color: hsla(183, 100%, 15%, 1);
+  font-size: 24px;
+  line-height: 36px;
+  margin: 6px 17.33px 6px 19px;
+  background-color: hsla(185, 38%, 97%, 1);
+  border: 0px solid;
+}
+
+/* NUMBER OF PEOPLE SECTION */
+
+.numberOfPeople-section {
+  width: 311px;
+  height: 78px;
+  margin: 32px;
+}
+
+.numberOfPeople-header {
+  line-height: 24px;
+}
+
+.numberOfPeople-img {
+  width: 13px;
+  height: 16px;
+  margin-left: 17px;
+  margin-top: 16px;
+}
+.numberOfPeople-input {
+  width: 72.28px;
+  height: 36px;
+  font-size: 24px;
+  margin-left: 190px;
+  margin-right: 0;
+}
+
+.numberOfPeople-amount {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* CALC RESULTS */
+
+.calc-results {
+  display: flex;
+  flex-direction: column;
+  background-color: hsla(183, 100%, 15%, 1);
+  height: 257px;
+  width: 327px;
+  border-radius: 15px;
+  margin: 0px 24px;
+}
+
+.calc-results-heading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: hsla(0, 0%, 100%, 1);
+  margin-left: 24px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.calc-results-text {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: hsla(183, 15%, 56%, 1);
+  margin-left: 24px;
+  margin-top: 0px;
+}
+
+.tipPerPerson {
+  color: hsla(172, 67%, 45%, 1);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 47px;
+  text-align: right;
+  padding-top: 37px;
+  height: 47px;
+}
+
+.tipAmount-result-heading {
+  margin-right: 87px;
+  padding-top: 37px;
+}
+
+.tipAmount-result {
+  display: flex;
 }
