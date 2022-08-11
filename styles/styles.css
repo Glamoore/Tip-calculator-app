@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   background-color: #c5e4e7;
   font-family: "Space Mono", monospace;
+  min-width: 100%;
 }
 
 .attribution {
@@ -23,6 +24,10 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/*=============================================
+=            Mobile Styles            =
+=============================================*/
 
 /* HEADINGS */
 
@@ -59,6 +64,7 @@ main {
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 /* BILL SECTION */
@@ -131,11 +137,14 @@ button {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
+  border: none;
 }
 
-button:active {
+button:active,
+button:hover {
   background-color: hsla(172, 67%, 45%, 1);
   color: hsla(183, 100%, 15%, 1);
+  border: none;
 }
 
 .custom_input {
@@ -176,6 +185,7 @@ button:active {
   margin-left: 17px;
   margin-top: 16px;
 }
+
 .numberOfPeople-input {
   width: 72.28px;
   height: 36px;
@@ -187,6 +197,11 @@ button:active {
 .numberOfPeople-amount {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.zeroMessage {
+  display: hidden;
+  visibility: hidden;
 }
 
 /* CALC RESULTS */
@@ -220,6 +235,7 @@ button:active {
   margin-top: 0px;
 }
 
+
 .tipPerPerson {
   color: hsla(172, 67%, 45%, 1);
   font-size: 32px;
@@ -228,13 +244,256 @@ button:active {
   text-align: right;
   padding-top: 37px;
   height: 47px;
+  flex-grow: 2;
+  margin-right: 22px;
 }
 
 .tipAmount-result-heading {
-  margin-right: 87px;
+  margin-right: 0px;
   padding-top: 37px;
 }
 
 .tipAmount-result {
   display: flex;
 }
+
+.totalAmount-result {
+  display: flex;
+}
+
+.totalAmount-result-heading {
+  padding-top: 20px;
+}
+
+.totalTipPerPerson {
+  margin-right: 22px;
+  padding-top: 20px;
+}
+
+.resetButton {
+  width: 281px;
+  height: 48px;
+  margin: auto;
+  color: hsla(183, 100%, 15%, 1);
+  background-color: hsla(172, 67%, 46%, 1);
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  border: 0;
+}
+
+/*=====  End of Mobile Styles  ======*/
+
+/*=============================================
+=            Desktop Styles Section            =
+=============================================*/
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin: auto;
+    max-width: 920px;
+    max-height: 481px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+
+  .header-logo {
+    margin-bottom: 87px;
+  }
+
+  /* BILL AMOUNT SECTION */
+
+  .bill-section {
+    min-width: 359px;
+    padding: 45px 48px 40px 48px;
+    /* margin: 0px 48px 40px 48px; */
+  }
+
+  .bill_amount {
+    width: 379px;
+  }
+
+  .bill_amount:active,
+  .bill_amount:hover {
+    border: 2px solid hsla(172, 67%, 45%, 1);
+  }
+
+  .user-bill-input {
+    width: 335px;
+    height: 36px;
+    color: hsla(183, 100%, 15%, 1);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    margin-left: 0;
+    /* margin-left: 210px; */
+    margin-right: 0;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+
+  /* TIP SELECTION SECTION */
+
+  .tip-section {
+    width: 375px;
+    height: 154px;
+    column-gap: 14px;
+    row-gap: 16px;
+    margin: 0px 48px 40px 48px;
+  }
+
+  .tip-heading {
+    padding-bottom: 16px;
+  }
+
+  .tip-selection {
+    min-width: 400px;
+    max-height: 120px;
+  }
+
+  button {
+    width: 117px;
+    height: 48px;
+  }
+
+  .button5 {
+    order: 0;
+  }
+
+  .button10 {
+    order: 1;
+  }
+
+  .button15 {
+    order: 4;
+  }
+
+  .button25 {
+    order: 0;
+  }
+
+  .button50 {
+    order: 1;
+  }
+
+  button:hover {
+    background-color: hsla(173, 61%, 77%, 1);
+  }
+
+  .custom_input {
+    width: 117px;
+    height: 48px;
+    order: 6;
+  }
+
+  .user-custom-tip-input {
+    width: 89px;
+    height: 36px;
+    margin: 6px 14px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+
+  .custom_input:active,
+  .custom_input:hover {
+    border: 2px solid hsla(172, 67%, 45%, 1);
+  }
+
+  /* NUMBER OF PEOPLE SECTION */
+
+  .numberOfPeople-section {
+    margin: 0px 48px;
+  }
+
+  .numberOfPeople-input {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .numberOfPeople-amount {
+    filter: none;
+  }
+
+  .numberOfPeopleHeader-Section {
+    display: flex;
+    width: 379px;
+  }
+
+  .numberOfPeople-header {
+    flex-grow: 2;
+  }
+
+  .zeroMessage {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: hsla(13, 70%, 61%, 1);
+    text-align: right;
+  }
+
+  /* CALC RESULTS */
+
+  .calc-results {
+    width: 400px;
+    height: 417px;
+    margin: 32px 0px;
+  }
+
+  .tipAmount-result {
+    padding: 40px 40px 0 40px;
+  }
+
+  .tipAmount-result-heading {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .tipPerPerson {
+    height: 71px;
+    padding-top: 0;
+    font-size: 48px;
+    flex-grow: 2;
+  }
+
+  .calc-results-heading {
+    margin: 0;
+  }
+
+  .calc-results-text {
+    margin: 0;
+  }
+
+  .totalAmount-container {
+    padding: 25px 40px 0 40px;
+  }
+
+  .totalAmount-result {
+    padding: 25px 40px 0 40px;
+  }
+
+  .resetButton {
+    width: 333px;
+    height: 48px;
+    background-color: hsla(183, 78%, 24%, 1);
+    color: hsla(183, 100%, 15%, 1);
+    margin: 122px 40px 40px 40px;
+  }
+
+  .resetButton:active,
+  .resetButton:hover {
+    background-color: hsla(172, 61%, 77%, 1);
+  }
+}
+
+/*=====  End of Desktop Styles Section  ======*/
+
