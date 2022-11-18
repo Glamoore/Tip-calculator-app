@@ -38,7 +38,7 @@
           <h2 class="bill-heading">Bill</h2>
           <div class="bill_amount">
             <img
-              src="/images/icon-dollar.svg"
+              src="/images/pound-icon.png"
               alt="dollar"
               class="bill-img"
             /><input
@@ -47,6 +47,26 @@
               name="bill_amount"
               class="user-bill-input"
               placeholder="0"
+            />
+          </div>
+        </section>
+
+        <section class="numberOfPeople-section">
+          <div class="numberOfPeopleHeader-Section">
+            <h2 class="numberOfPeople-header">Number of People</h2>
+            <span id="zeroErrorMessage" class="zeroMessage"></span>
+          </div>
+          <div class="bill_amount numberOfPeople-amount" id="numberOfPeople-Input">
+            <img
+              src="/images/icon-person.svg"
+              alt="dollar"
+              class="numberOfPeople-img"
+            /><input
+              type="number"
+              id="numberOfPeople"
+              name="numberOfPeople"
+              placeholder="0"
+              class="user-bill-input numberOfPeople-input"
             />
           </div>
         </section>
@@ -72,25 +92,7 @@
           </div>
         </section>
   
-        <section class="numberOfPeople-section">
-          <div class="numberOfPeopleHeader-Section">
-            <h2 class="numberOfPeople-header">Number of People</h2>
-            <span id="zeroErrorMessage" class="zeroMessage"></span>
-          </div>
-          <div class="bill_amount numberOfPeople-amount" id="numberOfPeople-Input">
-            <img
-              src="/images/icon-person.svg"
-              alt="dollar"
-              class="numberOfPeople-img"
-            /><input
-              type="number"
-              id="numberOfPeople"
-              name="numberOfPeople"
-              placeholder="0"
-              class="user-bill-input numberOfPeople-input"
-            />
-          </div>
-        </section>
+        
       </div>
 
       <section class="calc-results">

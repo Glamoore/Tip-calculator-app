@@ -15,16 +15,20 @@ function totalPerPerson5() {
   // Calculating the values to be displayed after input
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * 0.05) / splitBy;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalTip = billInput * 0.05;
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
 
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -40,7 +44,6 @@ function totalPerPerson5() {
   let fivePercentBtn = document.getElementById("5");
   fivePercentBtn.style.backgroundColor = "hsla(172, 67%, 45%, 1)";
   fivePercentBtn.style.color = "hsla(183, 100%, 15%, 1)";
-
 }
 
 // 10% tip
@@ -53,14 +56,18 @@ function totalPerPerson10() {
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * 0.1) / splitBy;
   let totalTip = billInput * 0.1;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -87,15 +94,19 @@ function totalPerPerson15() {
   // Calculating the values to be displayed after input
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * 0.15) / splitBy;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalTip = billInput * 0.15;
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -122,15 +133,19 @@ function totalPerPerson25() {
   // Calculating the values to be displayed after input
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * 0.25) / splitBy;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalTip = billInput * 0.25;
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -157,15 +172,19 @@ function totalPerPerson50() {
   // Calculating the values to be displayed after input
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * 0.5) / splitBy;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalTip = billInput * 0.5;
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -194,15 +213,19 @@ function totalPerPersonCustom() {
   // Calculating the values to be displayed after input
   let totalBill = billInput;
   let tipAmountPerPerson = (billInput * customTipPercentage) / splitBy;
+  let tipAmountPerPersonRounded = tipAmountPerPerson.toFixed(2);
   let totalTip = billInput * customTipPercentage;
   let totalCostWithTip = totalTip + Number(totalBill);
   let totalCostPerPerson = totalCostWithTip / splitBy;
+  let totalCostPerPersonRounded = totalCostPerPerson.toFixed(2);
 
   // Displaying the results of the calculation
-  document.getElementById("tipPerPerson").innerHTML = `£${tipAmountPerPerson}`;
+  document.getElementById(
+    "tipPerPerson"
+  ).innerHTML = `£${tipAmountPerPersonRounded}`;
   document.getElementById(
     "totalPerPerson"
-  ).innerHTML = `£${totalCostPerPerson}`;
+  ).innerHTML = `£${totalCostPerPersonRounded}`;
 
   // Number of people < Zero - error message
   if (splitBy === 0) {
@@ -219,6 +242,7 @@ function totalPerPersonCustom() {
 function resetButton() {
   billInput = document.getElementById("bill_amount").value = "";
   splitBy = Number((document.getElementById("numberOfPeople").value = ""));
+  customTipInput = document.getElementById("custom_input").value = "";
 
   let splitByElement = document.getElementById("numberOfPeople-Input");
   splitByElement.style.border = "none";

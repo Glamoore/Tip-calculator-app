@@ -65,6 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
 /* BILL SECTION */
@@ -235,7 +236,6 @@ button:hover {
   margin-top: 0px;
 }
 
-
 .tipPerPerson {
   color: hsla(172, 67%, 45%, 1);
   font-size: 32px;
@@ -289,6 +289,12 @@ button:hover {
 =            Desktop Styles Section            =
 =============================================*/
 
+@media screen and (max-width: 450px) {
+  main {
+    margin: auto;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   main {
     margin: auto;
@@ -309,7 +315,7 @@ button:hover {
 
   .bill-section {
     min-width: 359px;
-    padding: 45px 48px 40px 48px;
+    padding: 45px 48px 20px 48px;
     /* margin: 0px 48px 40px 48px; */
   }
 
@@ -411,7 +417,7 @@ button:hover {
   /* NUMBER OF PEOPLE SECTION */
 
   .numberOfPeople-section {
-    margin: 0px 48px;
+    margin: 0px 48px 30px;
   }
 
   .numberOfPeople-input {
@@ -496,4 +502,3 @@ button:hover {
 }
 
 /*=====  End of Desktop Styles Section  ======*/
-
